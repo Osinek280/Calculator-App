@@ -21,6 +21,7 @@ function displayNumbers () {
     value = value + this.textContent;
     input.value = value
     spanfunction()
+    isResult = false;
 }
 
 function operate () {
@@ -37,6 +38,7 @@ function operate () {
     value = value + this.textContent
     input.value = value
     spanfunction()
+    isResult = false;
 }
 
 function showResult() {
@@ -49,16 +51,14 @@ function showResult() {
     input.value = result;
     value = Number(result.toFixed(2)).toString();
     addToHistory();
+    spanfunction();
+    isResult = true;
 }
 
 function spanfunction() {
-    result = eval(value)
-    console.log(value)
-    console.log(input.value)
     if(isResult === false){
-        lastExquation.innerHTML = result
+        
     }else{
-        lastExquation.innerHTML = exquation + result
     }
 }
 
@@ -90,7 +90,7 @@ equalsButton.addEventListener('click', showResult)
 
 
 input.addEventListener('keypress', (event) =>{
-    let regex = /[!@#$%^&*()_=[\]{};':"\\|,.<>\?`~]/g;
+    let regex = /[!@#$%^&*()_=[\]{};':"\\ |,.<>\?`~]/g;
     let key = String.fromCharCode(event.keyCode);
     if((event.keyCode >= 65 && event.keyCode <= 90) || (event.keyCode >= 97 && event.keyCode <= 122) || regex.test(key)) {
       event.preventDefault();
