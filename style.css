@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+
+:root{
+  --background--: #f5a66b;
+  --calculator--: #243441;
+  --calculatorBtn--: #ed802e;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+body{
+  background: var(--background--);
+  height: 100vh;
+}
+
+.container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  gap: 20px;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 2px;
+}
+
+.panel button {
+  font-size: 25px;
+  background-color :rgba(0,0,0,0.466);
+    color: whitesmoke;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition: all .2s ease-in-out;
+    width: 80px;
+    height: 80px;
+    letter-spacing: 1px;
+}
+
+.equals {
+    grid-row: -1/-3;
+    grid-column: -2/-1;
+}
+
+button:hover {
+    background-color:rgba(0,0,0,0.546);
+}
+
+.display{
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  background-color :rgba(0,0,0,0.35);
+  height: 80px;
+  color: whitesmoke;
+  padding-right: 20px;
+  border-radius: 10px 10px 0 0;
+}
+
+.input{
+  background: none; 
+  border: none;
+  outline: none;
+  font-size: 30px;
+  color: whitesmoke;
+  width: 14ch;
+  text-align: end;
+}
+
+.lastExquation{
+  color: rgb(226, 216, 216);
+  font-size: 18px;
+}
+
+.calculator{
+  display: grid;
+  gap: 5px;
+}
+
+
+html{
+  font-size: 10px;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 8vh;
+  padding: 20px;
+  position: relative;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  color: #fff;
+  font-size: 15px;
+  letter-spacing: 1px;  
+}
+
+.mathSign{
+  margin: 0 6px;
+  font-size: 20px;
+}
+
+.calculator-history{
+  background:rgba(0,0,0,0.35);
+  height: 53vh;
+  font-size: 22px;
+  color: whitesmoke;
+  min-width: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.line{
+  background: whitesmoke;
+  height: 3px;
+  width: 88%;
+  margin-top: 6px;
+}
+
+.historyParent{
+  margin-top: 8px;
+  font-size: 20px;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.child{
+  margin-top: 2px;
+}

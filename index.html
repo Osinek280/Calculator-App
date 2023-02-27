@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+    rel="stylesheet">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header></header>
+    <div class="container">
+        <div class="calculator">
+            <div class="display">
+                <span class="lastExquation"></span>
+                <input type="text" class="input" pattern="O">
+            </div>
+            <div class="panel">
+                <button class="clear">C</button>
+                <button class="operator">%</button>
+                <button class="operator">/</button>
+                <button class="operator">*</button>
+                <button class="number">7</button>
+                <button class="number">8</button>
+                <button class="number">9</button>
+                <button class="operator">-</button>
+                <button class="number">4</button>
+                <button class="number">5</button>
+                <button class="number">6</button>
+                <button class="operator">+</button>
+                <button class="number">1</button>
+                <button class="number">2</button>
+                <button class="number">3</button>
+                <button class="equals">=</button>
+                <button class="number">0</button>
+                <button class="number">00</button>
+                <button class="number">.</button>
+            </div>
+        </div>
+        <div class="calculator-history">
+            <p>History</p>
+            <div class="line"></div>
+            <ul class="historyParent"></ul>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
+</body>
+</html>
+
+<!-- <ul class="historyParent">
+    <li class="child">5 + 20 = 18</li>
+    <li class="child">5 + 20 = 18</li>
+</ul> -->
