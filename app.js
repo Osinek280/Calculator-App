@@ -13,7 +13,6 @@ let isResult = false;
 let result = eval(value);
 
 
-// popraw zapisz instrukcji warunkowej dotyczącej decimalPart
 function displayNumbers () {
     if(this.textContent === '.' && value[value.length -1] === '.'){
         return;
@@ -70,9 +69,9 @@ function spanfunction() {
             return;
         }
         let decimalPart = result.toString().split(".")[1];
-        if(decimalPart === 1){
+        if(decimalPart.length === 1){
             result = result.toFixed(1)
-        }else if(decimalPart >= 2){
+        }else if(decimalPart.length >= 2){
             result = result.toFixed(2)
         }
         lastExquation.innerHTML = result
@@ -88,7 +87,7 @@ function clear() {
 }
 
 function addToHistory(){
-    const historyResult = Number(result)
+    let historyResult = Number(result)
     let decimalPart = historyResult.toString().split(".")[1];
     if(decimalPart === 1){
         historyResult = historyResult.toFixed(1)
@@ -98,7 +97,7 @@ function addToHistory(){
     const newExquation = document.createElement('li')
     newExquation.className = 'child'
     newExquation.innerHTML = `
-    ${exquation} = ${historyResult.toFixed(2)}
+    ${exquation} = ${historyResult}
     `
     parent.appendChild(newExquation);
 }
@@ -119,7 +118,7 @@ equalsButton.addEventListener('click', showResult)
 input.addEventListener('input', spanfunction)
 
 input.addEventListener('keypress', (event) =>{
-    let regex = /[!@#$%^&*()_=[\]{};':"\\ |,.<>\?`~]/g;
+    let regex = /[!@#$%^&()_=[\]{};':"\\ |,.<>\?`~]/g;
     let key = String.fromCharCode(event.keyCode);
     if((event.keyCode >= 65 && event.keyCode <= 90) || (event.keyCode >= 97 && event.keyCode <= 122) || regex.test(key)) {
       event.preventDefault();
